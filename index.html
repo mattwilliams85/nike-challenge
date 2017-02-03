@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nike Challenge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation-flex.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<div class="off-canvas off-canvas-menu">
+  <h3>Brands</h3>
+  <div class="divider"></div>
+  <h3>Categories</h3>
+  <div class="divider"></div>
+</div>
+
+<div class="off-canvas off-canvas-search">
+  <input type="search" placeholder="SEARCH">
+  <div class="gly-close glyph"></div>
+</div>
+
+<div class="mask"></div>
+
+<nav>
+  <div class="nav-mobile row align-justify align-middle full-width">
+    <div class="gly-logo glyph"></div>
+    <h4>NIKE MEN'S RUNNING</h4>
+    <div class="row toolbar">
+      <div id="search" class="gly-search glyph"></div>
+      <div class="gly-cart glyph"></div>
+      <div id="menu" class="gly-menu glyph"></div>
+    </div>
+
+  </div>
+
+  <div class="nav-top row align-justify full-width">
+    <div class="nav-brands row collapse">
+      <div>Nike+</div>
+      <div class="gly-jordan glyph"></div>
+      <div class="gly-hurley glyph"></div>
+      <div class="gly-converse glyph"></div>
+    </div>
+
+    <div class="nav-account row collapse align-middle">
+      <div>Join / Log In to Nike+ Account</div>
+      <div>Help</div>
+      <div class="gly-cart glyph"></div>
+      <div>
+        <img id="flag" src="http://content.nike.com/content/dam/nike/global/country_flags/us_sml.png">
+      </div>
+    </div>
+  </div>
+  <div class="nav-bottom row align-justify full-width">
+    <div class="gly-logo glyph"></div>
+
+    <div class="nav-categories row align-middle">
+      <div>MEN</div>
+      <div>WOMEN</div>
+      <div>BOYS</div>
+      <div>GIRLS</div>
+      <div>CUSTOMIZE</div>
+    </div>
+
+    <div class="row align-middle search">
+      <ul class="menu">
+        <li>
+          <input class="search" type="search" placeholder="Search">
+          <span class="gly-search glyph"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="carousel">
+  <div class="slider">
+    <div class="slide-1">
+      <div class="text">
+        <h2>NIKE</br>LUNAREPIC</br>FLYKNIT 2</h2>
+        <div class="description">Enjoy our smoothest ride with our most comfortable fit.</div>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+
+    <div class="slide-2 inverted">
+      <div class="text">
+        <h2>NIKE CITY COLLECTION</h2>
+        <div class="description">Inspired by those who run the city.</div>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+
+    <div class="slide-3 inverted">
+      <div class="text">
+        <h2>TRACK AND FIELD</h2>
+        <div class="description">Gear up for your season in the fastest spikes, shoes, and apparel for training and competition.</div>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+
+    <div class="slide-4">
+      <div class="text">
+        <h2>LONG-DISTANCE</br>LOVER</h2>
+        <div class="description">Go all the way in the Nike Air Zoom Vomero 12.</div>
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-nav">
+      <div class="plus root" id="plus-root"></div>
+      <h4 class="category" data-target="root">MEN'S RUNNING PRODUCTS</h4>
+
+      <div id="root" class="accordion">
+        <div class="divider"></div>
+        <h5 class="category" data-target="shop">
+          SHOP
+          <div class="plus" id="plus-shop"></div>
+        </h5>
+
+        <div class="links accordion" id="shop">
+          <div>Shoes</div>
+          <div>Spikes</div>
+          <div>Clothing</div>
+          <div>Tops & T-Shirts</div>
+          <div>Hoodies & Pullovers</div>
+          <div>Pants & Tights</div>
+          <div>Jackets & Vests</div>
+          <div>Accessories</div>
+          <div>Socks</div>
+        </div>
+
+        <div class="divider"></div>
+        <h5 class="category" data-target="featured">
+          FEATURED
+          <div class="plus" id="plus-featured"></div>
+        </h5>
+        <div class="links accordion" id="featured">
+          <div>Nike+ Run Club</div>
+          <div>Apple Watch Nike+</div>
+          <div>Running Shoe Finder</div>
+          <div>Ask A Running Expert</div>
+          <div>New Releases</div>
+          <div>Clearance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.6/slick.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

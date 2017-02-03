@@ -1,0 +1,403 @@
+@font-face {
+  font-family: "OneNikeGlyphs";
+  src: url("OneNikeGlyphs.woff"); }
+.glyph {
+  font-family: "OneNikeGlyphs";
+  cursor: pointer; }
+
+.gly-jordan:before {
+  content: "\f11e";
+  font-size: 21px; }
+
+.gly-converse:before {
+  content: "\f15b";
+  font-size: 62px; }
+
+.gly-hurley:before {
+  content: "\f14e";
+  font-size: 48px;
+  line-height: 42px; }
+
+.gly-cart:before {
+  content: "\f108";
+  font-size: 23px; }
+
+.gly-flag {
+  height: 13px; }
+
+.gly-logo:before {
+  content: "\f139";
+  font-size: 70px;
+  line-height: 68px;
+  position: relative;
+  top: -2px; }
+
+.gly-search:before {
+  content: "\f130";
+  font-size: 17pt; }
+
+.gly-menu:before {
+  content: "\f123";
+  font-size: 40px; }
+
+.gly-close:before {
+  content: "\f147";
+  font-size: 40px; }
+
+@font-face {
+  font-family: "OneNikeCurrency";
+  src: url("OneNikeCurrency.woff"); }
+body {
+  margin: 0;
+  font-size: 12px;
+  line-height: 14pt;
+  font-family: "Helvetica";
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background: #e5e5e5; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "OneNikeCurrency"; }
+
+h2 {
+  line-height: 42px; }
+
+h4 {
+  line-height: 25px; }
+
+h5 {
+  font-size: 14px; }
+
+nav {
+  background: #fff; }
+
+button {
+  background: #222;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "OneNikeCurrency";
+  font-size: 15px;
+  line-height: 38px;
+  padding: 0 20px; }
+
+.accordion {
+  display: none; }
+
+.nav-account {
+  padding: 0 20px 0 0; }
+  .nav-account div {
+    padding: 0 11px; }
+
+.nav-bottom {
+  padding: 0 32px 0 31px; }
+  .nav-bottom .gly-search:before {
+    transition: transform .3s;
+    position: absolute;
+    left: 15px;
+    top: 2px; }
+  .nav-bottom input[type="search"] {
+    border-color: #E5E5E5;
+    border-radius: 2px;
+    font-size: 11pt;
+    padding: 0 0 0 40px;
+    position: absolute;
+    right: 0;
+    transition: width .3s;
+    top: 0; }
+
+.nav-categories div {
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+  font-family: "OneNikeCurrency";
+  font-size: 17px;
+  height: 67px;
+  line-height: 67px;
+  padding: 0 20px;
+  transition: .3s; }
+  .nav-categories div:hover {
+    border-bottom: 2px solid #333; }
+
+.nav-brands div, .nav-account div {
+  cursor: pointer;
+  transition: color .3s; }
+  .nav-brands div:hover, .nav-account div:hover {
+    color: #222; }
+
+.nav-brands div {
+  border-right: 1px solid #ccc;
+  height: 39px;
+  padding: 0 32px; }
+
+.nav-mobile {
+  padding: 0 15px 0 15px;
+  border-bottom: 1px solid #ccc;
+  display: none; }
+  .nav-mobile .toolbar > div {
+    padding: 0 15px; }
+  .nav-mobile .gly-cart:before {
+    font-size: 30px; }
+  .nav-mobile .gly-search:before {
+    font-size: 22pt; }
+  .nav-mobile .gly-logo:before {
+    font-size: 60px;
+    line-height: 60px;
+    vertical-align: text-bottom; }
+
+.nav-top {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 39px;
+  line-height: 39px;
+  color: #8D8D8D;
+  width: 100%; }
+
+.mask {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 98;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity .3s;
+  opacity: 0;
+  pointer-events: none; }
+  .mask.active {
+    opacity: 1;
+    pointer-events: all; }
+
+.menu.active input {
+  transition: width .3s;
+  width: 300px; }
+.menu.active .glyph:before {
+  transform: translateX(-100px);
+  transition: transform .3s; }
+
+.off-canvas {
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  transition: transform .3s;
+  z-index: 99; }
+
+.off-canvas-menu {
+  height: 100vh;
+  right: -300px;
+  width: 300px; }
+  .off-canvas-menu h3 {
+    line-height: 60px; }
+  .off-canvas-menu.active {
+    transform: translateX(-300px); }
+
+.off-canvas-search {
+  height: 66px;
+  width: 100vw;
+  right: -100vw; }
+  .off-canvas-search .gly-close {
+    position: absolute;
+    right: 0;
+    padding: 4px 20px 0 0;
+    color: #666; }
+  .off-canvas-search.active {
+    transform: translateX(-100vw); }
+  .off-canvas-search input[type="search"] {
+    border: 0;
+    font-family: "OneNikeCurrency";
+    font-size: 30px;
+    height: 66px;
+    left: 0;
+    padding: 25px;
+    position: absolute;
+    top: 0; }
+
+.search {
+  position: relative; }
+  .search li {
+    height: 39px;
+    position: relative;
+    width: 200px; }
+
+.side-nav {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  left: 23px;
+  top: 46px;
+  padding: 24px 24px 18px 24px;
+  position: absolute;
+  transition: height .3s;
+  user-select: none;
+  width: 222px; }
+  .side-nav .links > div {
+    line-height: 22px; }
+  .side-nav h4 {
+    margin: 0; }
+  .side-nav .category {
+    position: relative;
+    transition: .3s; }
+  .side-nav .divider {
+    margin: 20px 0; }
+  .side-nav .plus {
+    height: 10px;
+    top: 5px;
+    right: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 1;
+    pointer-events: none; }
+    .side-nav .plus.root {
+      top: 30px;
+      right: 30px; }
+    .side-nav .plus:before, .side-nav .plus:after {
+      background: #222;
+      position: absolute;
+      transition: .3s; }
+    .side-nav .plus:before {
+      content: '';
+      height: 10px;
+      left: 4px;
+      width: 2px; }
+    .side-nav .plus:after {
+      content: '';
+      height: 2px;
+      top: 4px;
+      width: 10px; }
+    .side-nav .plus.active:before, .side-nav .plus.active:after {
+      transform: rotate(90deg); }
+    .side-nav .plus.active:after {
+      opacity: 0; }
+
+section.carousel {
+  position: relative; }
+  section.carousel .slick-slide {
+    height: 60vw;
+    max-height: 80vh;
+    min-height: 460px; }
+  section.carousel:hover .slick-arrow {
+    opacity: 1; }
+
+.slider {
+  height: 100%;
+  margin: 0; }
+  .slider .slide-1 {
+    background: url("../img/nike-1.jpg") center center/cover; }
+  .slider .slide-2 {
+    background: url("../img/nike-2.jpg") center center/cover; }
+  .slider .slide-3 {
+    background: url("../img/nike-3.jpg") center center/cover; }
+  .slider .slide-4 {
+    background: url("../img/nike-4.jpg") center center/cover; }
+  .slider .inverted {
+    color: #fff; }
+    .slider .inverted button {
+      background: #fff;
+      color: #222; }
+  .slider .text {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    right: 60px;
+    text-align: right; }
+    .slider .text .description {
+      font-size: 15px;
+      max-width: 230px; }
+  .slider button {
+    margin: 20px 0 0 0; }
+
+.slick-arrow {
+  opacity: 0;
+  top: 50%;
+  transition: opacity .3s;
+  z-index: 99; }
+  .slick-arrow:before {
+    color: #999;
+    font-family: "OneNikeGlyphs";
+    font-size: 50px; }
+  .slick-arrow.hidden {
+    opacity: 0 !important; }
+
+.slick-dots {
+  bottom: 25px; }
+  .slick-dots li button:before {
+    font-size: 10px; }
+
+.slick-dots li button:before {
+  background: url("../img/bullet.png");
+  background-repeat: no-repeat;
+  height: 12px;
+  opacity: 1;
+  text-indent: -1000em;
+  width: 13px; }
+
+.slick-dots li.slick-active button:before {
+  background-position: 0 -14px; }
+
+.slick-prev {
+  left: 20px; }
+  .slick-prev:before {
+    content: "\f10b"; }
+
+.slick-next {
+  right: 20px; }
+  .slick-next:before {
+    content: "\f10c"; }
+
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial; }
+
+.divider {
+  background: #ccc;
+  height: 1px;
+  width: 100%; }
+
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  h2 {
+    line-height: 38px;
+    font-size: 38px; } }
+@media screen and (min-width: 960px) {
+  h2 {
+    line-height: 62px;
+    font-size: 60px; } }
+@media screen and (max-width: 900px) {
+  .nav-mobile {
+    display: flex; }
+
+  .nav-top, .nav-bottom {
+    display: none; } }
+@media screen and (max-width: 600px) {
+  .nav-mobile h4 {
+    display: none; }
+
+  .slider {
+    color: #fff; }
+    .slider .text {
+      align-items: center;
+      text-align: center;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4); }
+      .slider .text button {
+        background: #fff;
+        color: #222; }
+
+  .side-nav {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%; }
+
+  h2 {
+    line-height: initial;
+    font-size: 28pt; }
+
+  h5 {
+    position: relative; }
+
+  .slick-dots {
+    opacity: 0; } }
+
+/*# sourceMappingURL=style.css.map */

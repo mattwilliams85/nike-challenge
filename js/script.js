@@ -63,4 +63,7 @@ function loadSlider () {
   }
 }
 
-loadSlider()
+$(document).ready(() => {
+  loadSlider()
+})
+

@@ -315,6 +315,7 @@ section.carousel {
     height: 60vw;
     max-height: 80vh;
     min-height: 460px;
+    position: relative;
   }
 
   &:hover {
@@ -349,9 +350,11 @@ section.carousel {
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    position: relative;
-    right: 60px;
+    right: 0;
+    padding: 0 60px 0 0;
     text-align: right;
+    position: absolute;
+
 
     .description {
       font-size: 15px;
@@ -468,8 +471,9 @@ section.carousel {
     .text {
       align-items: center;
       text-align: center;
-      left: 0;
       background: rgba(0,0,0,0.4);
+      padding: 0;
+      left: 0;
       button {
         background: #fff;
         color: #222;

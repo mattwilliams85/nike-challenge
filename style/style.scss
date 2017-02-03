@@ -1,7 +1,9 @@
 @import "glyph.scss";
 
-$break-small: 320px;
+$break-small: 600px;
 $break-med: 960px;
+
+$nk-color-black: #222;
 
 @font-face {
   font-family: "OneNikeCurrency";
@@ -39,7 +41,7 @@ nav {
 }
 
 button {
-  background: #222;
+  background: $nk-color-black;
   border-radius: 2px;
   color: #fff;
   cursor: pointer;
@@ -105,7 +107,7 @@ button {
   transition: color .3s;
 
   &:hover {
-    color: #222;
+    color: $nk-color-black;
   }
 }
 
@@ -275,7 +277,7 @@ button {
     }
 
     &:before, &:after {
-      background: #222;
+      background: $nk-color-black;
       position: absolute;
       transition: .3s;
     }
@@ -340,7 +342,7 @@ section.carousel {
 
     button {
       background: #fff;
-      color: #222;
+      color: $nk-color-black;
     }
   }
 
@@ -422,6 +424,9 @@ section.carousel {
   }
 }
 
+// LAYOUT
+// ---------------------------------------
+
 .full-width {
    width: 100%;
    margin-left: auto;
@@ -435,14 +440,17 @@ section.carousel {
   width: 100%;
 }
 
-@media screen and (min-width: 600px) and (max-width: 960px) {
+// MEDIA QUERIES
+// ---------------------------------------
+
+@media screen and (min-width: $break-small) and (max-width: $break-med) {
   h2 {
     line-height: 38px;
     font-size: 38px;
   }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: $break-med) {
   h2 {
     line-height: 62px;
     font-size: 60px;
@@ -459,9 +467,7 @@ section.carousel {
   }
 }
 
-
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $break-small) {
   .nav-mobile h4 {
     display: none;
   }
@@ -476,7 +482,7 @@ section.carousel {
       left: 0;
       button {
         background: #fff;
-        color: #222;
+        color: $nk-color-black;
       }
     }
   }
